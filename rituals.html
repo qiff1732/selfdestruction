@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ритуалы | Тёмный Юмор Будущего</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Creepster&family=Nosifer&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="smoke-container"></div>
+    <canvas id="particles"></canvas>
+    <div class="starfield"></div>
+    <header>
+        <h1>Ритуалы</h1>
+    </header>
+    <nav>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="rituals.html">Ритуалы</a>
+            <a href="artifacts.html">Артефакты</a>
+            <a href="about.html">О проекте</a>
+        </div>
+    </nav>
+    <div class="container">
+        <section>
+            <h2>Ритуалы (которые не помогут)</h2>
+            <p>Попробуй эти практики, если хочешь окончательно всё испортить:</p>
+            <ul>
+                <li>Ритуал Полуночи: Зажги свечу в 12, но она упадёт и спалит твою хату.</li>
+                <li>Круг теней: Начерти пентаграмму, но сосед подумает, что ты псих, и вызовет ментов.</li>
+                <li>Зеркало судьбы: Посмотри в зеркало ночью, но там будет только твоя кринжовая рожа.</li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>© 2025 Тёмный Юмор Будущего. Живи с этим.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/smoke.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
